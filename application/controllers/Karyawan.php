@@ -77,7 +77,7 @@ class Karyawan extends CI_Controller{
             'total' => $total,
             'foto' => $foto
             );
-        $this->M_karyawan->input_data($data,'tabel_12210630');
+        $this->M_karyawan->input_data($data,'tabel_12210885');
         redirect('karyawan/index');
         }else{
             $data['status'] = ['Menikah','Belum Menikah'];
@@ -87,7 +87,7 @@ class Karyawan extends CI_Controller{
     }
     function edit ($id) {
         $where = array('id' => $id);
-        $data['karyawan'] = $this->M_karyawan->edit_data($where,'tabel_12210630')->result();
+        $data['karyawan'] = $this->M_karyawan->edit_data($where,'tabel_12210885')->result();
         $data['status'] = ['Menikah','Belum Menikah'];
         $data['jabatan'] = ['Manager','Direktur','Staff'];
         $this->load->view('edit_data',$data);
